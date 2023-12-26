@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>GDPR_Auditor_Account_Visibility</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Grants Read access to all accounts and contracts located in the EU; Use the provided European Union checkbox on the account record to set the criteria.</description>
+        <label>GDPR_Auditor_Account_Visibility</label>
+        <sharedTo>
+            <role>GDPR_Auditor</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>European_Union__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RestrictionRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <description>Allows Technical Sales Managers* to see only tasks from their department</description>
+    <enforcementType>Restrict</enforcementType>
+    <masterLabel>Sales_Manager_Task_Restriction</masterLabel>
+    <recordFilter>Owner:User.Department=$User.Department</recordFilter>
+    <targetEntity>Task</targetEntity>
+    <userCriteria>$User.UserRoleId=&apos;00exxxxxxxxxxxx&apos;</userCriteria>
+    <version>1</version>
+</RestrictionRule>
